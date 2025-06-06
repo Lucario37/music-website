@@ -1,0 +1,112 @@
+@media (max-width: 1600px) {
+    .songCard img , .playSong{
+        display: none;
+    }
+    .songCard{
+        justify-content: center;
+    }
+}
+/* for laptops and desktops */
+@media (min-width: 1024px){ 
+   .down-sub-container{
+    width: 74.5%;
+    left: 25.5%;
+    height: 8vh;
+   }
+   .right-sub-container{
+    height: 85vh;
+   }
+}
+/* for tablets */
+@media (min-width: 769px) and (max-width: 1024px){
+    .nav{
+        height: 10vh;
+        position: relative;
+    }
+    .spotify-img{
+      display: none;
+    }
+    .hamburger-img{
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 10px;
+    }
+    .hamburger-img>img{
+        width: 30px;
+    }
+    .right-nav-part{
+        display: none;
+    }
+    .drop-down-right-nav-button img{
+        display: block;
+    }
+    .main{
+        height: 90vh;
+    }
+    .right-sub-container{
+        width: 100vw;
+        height: 86%;
+    }
+    .left-sub-container{
+        display: none;
+    }
+    .middle-left-sub-container{
+        height: 70%;
+    }
+    .down-sub-container{
+        left: 0;
+        width: 100vw;
+        height: 10%;
+    }
+    .songCard{
+        justify-content: start;
+    }
+    .left-nav-part{
+        width: 0;
+    }
+}
+/* for mobiles */
+@media (max-width:880px) {
+    .drop-down-right-nav-button{
+        display: none;
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .nav{
+        overflow: hidden;
+    }
+    .left-sub-container{
+        display: none;
+    }
+    .down-sub-container{
+        left: 0;
+        width: 100vw;
+        height: 8%;
+    }
+    .right-sub-container{
+        width: 100vw;
+        height: 90vh;
+    }
+    .spotify-img{
+        display: none;
+    }
+    .hamburger-img{
+        display: block;
+        padding-left: 10px;
+    }
+    .show-song-lib-button{
+        margin-right: 8px !important;
+        margin-top: 5px;
+    }
+    .middle-left-sub-container{
+        height: 85%;
+    }
+    .right-nav-part{
+        display: none;
+    }
+    .drop-down-right-nav-button img{
+        display: block;
+    }
+
+ }

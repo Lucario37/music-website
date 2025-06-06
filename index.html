@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utilityClasses.css" />
+    <link rel="stylesheet" href="mediaQuery.css">
+    <script src="https://kit.fontawesome.com/2bfdf0f8e6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav border flex">
+            <div class="left-nav-part">
+                <div class="spotify-img invert">
+                    <img src="nav_assets/asset 40.svg" alt="spotify-logo">
+                </div>
+                <div class="hamburger-img invert">
+                    <img src="nav_assets/hamburger.svg" alt="">
+                </div>
+            </div>
+            <div class="middle-nav-part flex">
+                <div class="home-logo invert">
+                    <img src="nav_assets/asset 41.svg" alt="home-logo" style="width: 25px;">
+                </div>
+                <div class="search-bar flex">
+                    <div class="search-icon-img invert">
+                        <img src="nav_assets/asset 42.svg" alt="" class="search-svg">
+                    </div>
+                    <input type="text" placeholder="search..." class="search-input">
+                    <img src="nav_assets/asset 44.svg" alt=""
+                        style="width: 25px;height: 30px;filter: invert(1);transform: translateY(3px);">
+                </div>
+            </div>
+            <div class="right-nav-part flex">
+                <div class="right-nav-buttons flex">
+                    <div class="install-app-button flex">
+                        <img src="nav_assets/asset 45.svg" alt="install-app-icon"
+                            style="height: 21px; transform: translateY(3px); filter: invert(1);">
+                        <div class="install-app-text" style="font-size: 16px; color: #000000;">
+                            <button type="button">
+                                install App
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sign-up-button"><button type="button">Sign up</button></div>
+                    <div class="login-in-button"><button type="button">Log in</button></div>
+                </div>
+            </div>
+            <div class="drop-down-right-nav-button invert">
+                <img src="nav_assets/dropDown.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container flex">
+            <div class="left-sub-container border">
+                <div class="top-left-sub-container flex">
+                    <div class="your-lib">
+                        <a href="#" style="color: #fff; text-decoration: none;"><img src="nav_assets/asset 46.svg"
+                                style="transform: translateY(5px); filter: invert(1);height: 25px;" alt="">&nbsp;Your
+                            Library</a>
+                    </div>
+                    <button type="button" class="show-song-lib-button" style="margin-right: 20px;">
+                        <img src="nav_assets/asset 47.svg" alt="" style="transform: translateY(2px);height: 16px;"
+                            type="button">
+                    </button>
+                </div>
+                <div class="middle-left-sub-container">
+                    <div class="create-playlist flex">
+                        <span style="font-size: 18px;font-weight: 900;
+                        ">
+                            Create your first playlist
+                        </span>
+                        <span>It's easy, we'll help you</span>
+                        <button class="create-playlist-button" type="button">Create playlist</button>
+                    </div>
+                    <div class="browse-podcast flex">
+                        <span style="font-size: 18px;font-weight: 900;
+                        ">
+                            Let's find some podcasts to follow
+                        </span>
+                        <span>We'll keep you updated on new episodes</span>
+                        <button class="browse-podcast-button" type="button">Browse podcasts</button>
+                    </div>
+                </div>
+                <div class="bottom-left-sub-container">
+                    <div class="top-bottom-left-sub-cont"></div>
+                    <div class="bottom-bottom-left-sub-cont">
+                        <div class="docu-links">
+                            <ul class="flex" style="padding: 20px;">
+                                <li><a href="">Legal</a></li>
+                                <li><a href="">Safety & Privacy Center</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Cookies</a></li>
+                                <li><a href="">About Ads</a></li>
+                                <li><a href="">Accessibility</a></li>
+                            </ul>
+                        </div>
+                        <div class="eng-button">
+                            <img src="nav_assets/asset 48.svg" alt=""
+                                style="height: 20px; filter: invert(1); transform: translateY(5px);">
+                            <button type="button">
+                                English
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-sub-container border">
+                <h1>Popular artists</h1>
+                <div class="cards flex">
+                    <!-- cards load dynamically by js through displayalbum function -->
+                </div>
+            <div class="down-sub-container invert">
+                <div class="song-name">
+                </div>
+                <div class="song-buttons">
+                    <img src="nav_assets/asset 49.svg" style="width: 20px; height: 20px;" alt="" class="shuffle-button">
+                    <img src="nav_assets/asset 50.svg" style="width: 20px; height: 20px;" alt="" class="privous-button">
+                    <img src="nav_assets/asset 56.svg" style="width: 20px; height: 20px;" alt=""
+                        class="main-play-button">
+                    <img src="nav_assets/asset 52.svg" style="width: 20px; height: 20px;" alt="" class="next-button">
+                    <img src="nav_assets/asset 53.svg" style="width: 20px; height: 20px;" alt="" class="repeat-button">
+                </div>
+                <div class="song-time">
+                </div>
+                <div class="song-volume">
+                    <img src="nav_assets/asset 55.svg" alt="" class="volume-button">
+                    <div class="volumar-bar">
+                        <input type="range" min="0" max="1" step="0.01" value="1" class="volume-bar">
+                    </div>
+                </div>
+                <div class="seekBar">
+                    <div class="circle">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer"></div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

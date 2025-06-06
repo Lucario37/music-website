@@ -1,0 +1,61 @@
+.flex{
+   display: flex;
+   flex-direction: row wrap;
+}
+.container{
+    width: 100vw;
+    height: 100%;
+    gap: 5px;
+}
+.truncate {
+    white-space: nowrap;     /* Prevents text from wrapping */
+    overflow: hidden;        /* Hides overflow text */
+    text-overflow: ellipsis; /* Adds "..." at the end */
+    width: 200px;            /* Adjust width as needed */
+}
+
+.invert{
+    filter: invert(1);
+}
+.grey-bg-color{
+    background-color: #1f1f1f;
+}
+.card:hover{
+    background-color: #151313;
+    border-radius: 30px;
+    transform: scale(1.05);
+}
+.playButton:not(other-class){
+    display: none;
+    bottom: 74px;
+    right: 23px;
+    z-index: 1;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+/* Scrollbar for WebKit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Background behind the scrollbar */
+::-webkit-scrollbar-track {
+    background: #222; /* Dark background */
+}
+
+/* Scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: #555; /* Gray color */
+    border-radius: 5px;
+}
+
+/* Scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* Scrollbar for Firefox */
+* {
+    scrollbar-color: #555 #222; /* Handle and track color */
+}
