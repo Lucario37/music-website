@@ -147,7 +147,7 @@ async function getSongs(folder) {
   let songs = [];
   currentFolder = folder
   const response = await fetch(
-    `http://127.0.0.1:5500/songs/${folder}`
+    `https://music-listening.vercel.app/${folder}`
   );
   const data = await response.text()
     .then((data) => {
@@ -201,7 +201,7 @@ volumeBar.addEventListener("input", function () {
 async function displayAlbums() {
   try {
     // Fetch the directory listing
-    const response = await fetch("http://127.0.0.1:5500/songs/");
+    const response = await fetch("https://music-listening.vercel.app/");
     const data = await response.text();
 
     // Parse the response to extract folder names
@@ -218,13 +218,13 @@ async function displayAlbums() {
     // Fetch and generate album cards in parallel
     await Promise.all(folders.map(async (folder) => {
       try {
-        let infoResponse = await fetch(`http://127.0.0.1:5500/songs//${folder}/info.json`);
+        let infoResponse = await fetch(`https://music-listening.vercel.app/${folder}/info.json`);
         let info = await infoResponse.json();
 
         cardsHTML += `
           <div class="card" id="card" data-foldername="${folder}">
             <img src="nav_assets/playButtonSvg.svg" class="playButton" alt="">
-            <img src="http://127.0.0.1:5500/songs/${folder}/cover.jpeg" alt="">
+            <img src="https://music-listening.vercel.app/${folder}/cover.jpeg" alt="">
             <h4>${info.Artist_Name}</h4>
             <span>${info.Category}</span>
           </div>
@@ -264,7 +264,7 @@ document.querySelector('.search-input').addEventListener('keydown',(e)=>{
     matchInput(input)
     async function matchInput()
     {
-      const response=await fetch('http://127.0.0.1:5500/songs/')
+      const response=await fetch('https://music-listening.vercel.app/')
       const data=await response.text()
       let div=document.createElement('div')
       div.innerHTML=data
@@ -300,12 +300,12 @@ async function searchAlbumDisplay(folder)
  cards=document.querySelector('.cards')
  cards.innerHTML=''
  await Promise.all(folders.map(async(folder)=>{
-  let response=await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`)
+  let response=await fetch(`https://music-listening.vercel.app/${folder}/info.json`)
   let info=await response.json()
   cards.innerHTML+=
   `<div class="card" id="card" data-foldername="${folder}">
             <img src="nav_assets/playButtonSvg.svg" class="playButton" alt="">
-            <img src="http://127.0.0.1:5500/songs/${folder}/cover.jpeg" alt="">
+            <img src="https://music-listening.vercel.app/${folder}/cover.jpeg" alt="">
             <h4>${info.Artist_Name}</h4>
             <span>${info.Category}</span>
           </div>`
